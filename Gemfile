@@ -57,3 +57,6 @@ group :test do
 end
 
 gem 'devise', '~> 4.9'
+gem "httparty", "~> 0.21.0"
+gem 'batch-loader'
+gem 'parallel'

@@ -7,17 +7,28 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
   </head>
 
-  <% if current_user %>
-    <div class="header">
-      <h1>Welcome <%= current_user.full_name %></h1>
-      <%= button_to("Log Out", destroy_user_session_path, method: :delete) %>
-  <% end %>
-
   <body>
-    <%= yield %>
+    <header>
+      <div class="header">
+        <h1>Hello, <%= current_user.email %></h1>
+        <%= button_to("Log Out", destroy_user_session_path, method: :delete, class: 'align_right') %>
+      </div>
+
+      <p class="notice">Welcome to my website!</p>
+
+
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p><%= current_user.full_name %> website.</p>
+    </footer>
   </body>
 </html>

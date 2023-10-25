@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  tasks:
+    title: 'Title'
+    description: 'Description'
+    due_date: 'Due Date'
+  location:
+    name: 'Location'

@@ -3,6 +3,6 @@ FactoryBot.define do
     association :user
     title { FFaker::Book.title }
     description { FFaker::Book.genre }
-    due_date { Time.now + rand(1..10).days }
+    due_date { Time.now + 1.days }
   end
 end

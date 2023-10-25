@@ -69,6 +69,7 @@ GEM
     ast (2.4.2)
     awesome_print (1.9.2)
     base64 (0.1.1)
+    batch-loader (2.0.1)
     bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -98,6 +99,9 @@ GEM
     geocoder (1.8.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -126,6 +130,7 @@ GEM
     mini_portile2 (2.8.5)
     minitest (5.20.0)
     msgpack (1.7.2)
+    multi_xml (0.6.0)
     net-imap (0.4.2)
       date
       net-protocol
@@ -263,6 +268,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  batch-loader
   bootsnap
   byebug
   debug
@@ -270,8 +276,10 @@ DEPENDENCIES
   factory_bot_rails
   ffaker
   geocoder
+  httparty (~> 0.21.0)
   importmap-rails
   jbuilder
+  parallel
   puma (~> 5.0)
   rails (~> 7.0.8)
   rspec-rails

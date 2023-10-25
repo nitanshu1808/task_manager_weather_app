@@ -1,2 +1,19 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<div>
+  <h2>Tasks</h2>
+</div>
+<figure>
+  <table class="table-full-width">
+    <tr>
+      <th><%= I18n.t('tasks.title') %></th>
+      <th><%= I18n.t('tasks.description') %></th>
+      <th><%= I18n.t('tasks.due_date') %></th>
+    </tr>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= task.due_date.strftime('%d-%m-%y') %></td>
+      </tr>
+    <% end %>
+  </table>
+</figure>
