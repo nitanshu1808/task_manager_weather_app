@@ -29,26 +29,26 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+gem 'geocoder'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rubocop', require: false
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'ffaker'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
 end
 
-
 group :development do
-  gem 'web-console'
   gem 'awesome_print'
+  gem 'web-console'
 end
 
 group :test do

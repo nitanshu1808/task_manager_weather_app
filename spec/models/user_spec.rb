@@ -9,6 +9,8 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_presence_of(:password) }
     it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
+    it { is_expected.to validate_length_of(:first_name).is_at_least(ApplicationRecord::MIN_STRING_LENGTH) }
+    it { is_expected.to validate_length_of(:last_name).is_at_least(ApplicationRecord::MIN_STRING_LENGTH) }
   end
 
   describe '#db column validation' do

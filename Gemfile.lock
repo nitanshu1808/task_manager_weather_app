@@ -94,6 +94,7 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffaker (2.21.0)
+    geocoder (1.8.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -266,6 +267,7 @@ DEPENDENCIES
   devise (~> 4.9)
   factory_bot_rails
   ffaker
+  geocoder
   importmap-rails
   jbuilder
   puma (~> 5.0)
