@@ -2,5 +2,5 @@ class Location < ApplicationRecord
   belongs_to :user
 
   validates :name, length: { minimum: MIN_STRING_LENGTH }
-  validates_presence_of :name, :lat, :lng, :user_id
+  validates_presence_of :name
 end

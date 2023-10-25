@@ -49,6 +49,7 @@ end
 group :development do
   gem 'awesome_print'
   gem 'web-console'
+  gem 'byebug'
 end
 
 group :test do

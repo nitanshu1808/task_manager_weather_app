@@ -23,4 +23,13 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_db_column(:updated_at).of_type(:datetime) }
     it { is_expected.to have_db_index(:email) }
   end
+
+  describe '#association' do
+    it { is_expected.to have_many(:tasks) }
+    it { is_expected.to have_one(:location) }
+  end
+
+  describe '#accept_nested_attributes_for' do
+    it { is_expected.to accept_nested_attributes_for(:location) }
+  end
 end
