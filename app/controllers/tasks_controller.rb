@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
   def index
-    @tasks = current_user.tasks
+    @tasks = ::TaskAdaptor.new(current_user).build
   end
 end

@@ -7,12 +7,19 @@
       <th><%= I18n.t('tasks.title') %></th>
       <th><%= I18n.t('tasks.description') %></th>
       <th><%= I18n.t('tasks.due_date') %></th>
+      <th><%= I18n.t('weather.temperation') %></th>
+      <th><%= I18n.t('weather.humidity') %></th>
+      <th><%= I18n.t('weather.wind_speed') %></th>
+
     </tr>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.title %></td>
-        <td><%= task.description %></td>
-        <td><%= task.due_date.strftime('%d-%m-%y') %></td>
+        <td><%= task[:title].truncate(10) %></td>
+        <td><%= task[:description].truncate(20) %></td>
+        <td><%= task[:due_date] %></td>
+        <td><%= task[:weather]["temp"] %></td>
+        <td><%= task[:weather]["humidity"] %></td>
+        <td><%= task[:weather]["wind_speed"] %></td>
       </tr>
     <% end %>
   </table>

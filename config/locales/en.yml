@@ -30,10 +30,14 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  not_available: "N/A"
   tasks:
     title: 'Title'
     description: 'Description'
     due_date: 'Due Date'
   location:
     name: 'Location'
+  weather:
+    temperation: 'Temp(°C)'
+    humidity: Humidity(%)
+    wind_speed: 'Wind(m/sec)'

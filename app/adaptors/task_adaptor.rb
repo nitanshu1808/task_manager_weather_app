@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class TaskAdaptor
   attr_accessor :user, :data
 
@@ -48,6 +47,7 @@ class TaskAdaptor
           options = {
             lat: location.lat,
             lon: location.lng,
+            units: :metric,
             dt: task.due_date.utc.to_i,
           }
 
