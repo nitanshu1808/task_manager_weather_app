@@ -1,0 +1,441 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+
+  DefaultFormatter: progress
+  DisplayCopNames: true
+  ExtraDetails: true
+  # Disable new cops by default since they'll cause noise on version upgrades.
+  # We can always enable them later.
+  NewCops: disable
+  SuggestExtensions: false
+
+require:
+  - rubocop-rspec
+
+Layout/CaseIndentation:
+  Description: Indentation of when in a case/when/[else/]end.
+  Enabled: true
+  EnforcedStyle: case
+  IndentOneStep: false
+  SupportedStyles:
+  - case
+  - end
+
+Layout/ClosingHeredocIndentation:
+  Description: Checks the indentation of here document closings.
+  Enabled: true
+
+Layout/CommentIndentation:
+  Description: Indentation of comments.
+  Enabled: true
+
+Layout/DotPosition:
+  Description: Checks the . position in multi-line method calls..
+  Enabled: true
+  EnforcedStyle: trailing
+  SupportedStyles:
+  - leading
+  - trailing
+
+Layout/ElseAlignment:
+  Description: Align elses and elsifs correctly.
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Description: Checks for a newline after the final magic comment.
+  Enabled: true
+
+Layout/EmptyLinesAroundAccessModifier:
+  Description: Access modifiers should be surrounded by blank lines.
+  Enabled: true
+  EnforcedStyle: around
+  SupportedStyles:
+  - around
+  - only_before
+
+Layout/EmptyLinesAroundBlockBody:
+  Description: Keeps track of empty lines around block bodies.
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+  SupportedStyles:
+  - empty_lines
+  - no_empty_lines
+
+Layout/EmptyLinesAroundClassBody:
+  Description: Keeps track of empty lines around class bodies.
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+  SupportedStyles:
+  - empty_lines
+  - empty_lines_except_namespace
+  - empty_lines_special
+  - no_empty_lines
+  - beginning_only
+  - ending_only
+
+Layout/EmptyLinesAroundMethodBody:
+  Description: Keeps track of empty lines around method bodies.
+  Enabled: true
+
+Layout/EmptyLinesAroundModuleBody:
+  Description: Keeps track of empty lines around module bodies.
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+  SupportedStyles:
+  - empty_lines
+  - empty_lines_except_namespace
+  - empty_lines_special
+  - no_empty_lines
+
+Layout/EndAlignment:
+  Description: Align ends correctly.
+  Enabled: true
+  EnforcedStyleAlignWith: variable
+  SupportedStylesAlignWith:
+  - keyword
+  - variable
+  - start_of_line
+
+Layout/FirstArgumentIndentation:
+  Description: Checks the indentation of the first parameter in a method call.
+  Enabled: true
+  EnforcedStyle: consistent
+  SupportedStyles:
+  - consistent
+  - consistent_relative_to_receiver
+  - special_for_inner_method_call
+  - special_for_inner_method_call_in_parentheses
+
+Layout/IndentationConsistency:
+  Description: Keep indentation consistent.
+  Enabled: true
+  EnforcedStyle: normal
+  SupportedStyles:
+  - normal
+  - indented_internal_methods
+
+Layout/IndentationWidth:
+  Description: Checks indentation that doesn’t use the specified number of spaces.
+  Enabled: true
+  Width: 2
+
+Layout/LeadingCommentSpace:
+  Description: Checks whether comments have a leading space after the symbol denoting the start.
+  Enabled: true
+
+Layout/LineLength:
+  Description: Length of lines in the source code
+  Max: 100
+  AutoCorrect: true
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+  - http
+  - https
+  IgnoreCopDirectives: true
+
+Layout/MultilineMethodCallIndentation:
+  Description: Checks indentation of method calls with the dot operator that span more
+    than one line.
+  Enabled: true
+  EnforcedStyle: aligned
+  SupportedStyles:
+  - aligned
+  - indented
+
+Layout/SpaceAfterColon:
+  Description: Whether or not to require a space after colon.
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  Description: Whether or not to require a space after commas.
+  Enabled: true
+
+Layout/SpaceAfterSemicolon:
+  Description: Whether or not to require a space after semicolons.
+  Enabled: true
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Description: Checks that the equals signs in parameter default assignments have or
+    don't have surrounding space depending on configuration.
+  Enabled: true
+  EnforcedStyle: space
+  SupportedStyles:
+  - space
+  - no_space
+
+Layout/SpaceAroundKeyword:
+  Description: Whether or not to require a space around keywords.
+  Enabled: true
+
+Layout/SpaceBeforeComma:
+  Description: Whether or not to require a space before commas.
+  Enabled: true
+
+Layout/SpaceBeforeComment:
+  Description: Checks for missing space between code and a comment on the same line.
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Description: Checks that exactly one space is used between a method name and the first argument
+    for method calls without parentheses.
+  Enabled: true
+
+Layout/SpaceBeforeBlockBraces:
+  Description: Checks that block braces have or don’t have a space before the opening brace.
+  Enabled: true
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: space
+  SupportedStyles:
+  - space
+  - no_space
+
+Layout/SpaceInsideBlockBraces:
+  Description: Checks that block braces have or don't have surrounding space. For blocks
+    taking parameters, checks that the left brace has or doesn't have trailing space.
+  Enabled: true
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SpaceBeforeBlockParameters: true
+  SupportedStyles:
+  - space
+  - no_space
+
+Layout/SpaceInsideHashLiteralBraces:
+  Description: Checks that braces used for hash literals have or don’t have surrounding space.
+  Enabled: true
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SupportedStyles:
+  - space
+  - no_space
+  - compact
+
+Layout/SpaceInsideParens:
+  Description: Checks for spaces inside ordinary round parentheses.
+  Enabled: true
+
+Layout/TrailingEmptyLines:
+  Description: Checks for trailing blank lines and a final newline in the source code.
+  Enabled: true
+  EnforcedStyle: final_newline
+  SupportedStyles:
+  - final_newline
+  - final_blank_line
+
+Layout/TrailingWhitespace:
+  Description: Checks for trailing whitespace in the source code.
+  Enabled: true
+  AllowInHeredoc: false
+
+Lint/AmbiguousOperator:
+  Description: Checks for ambiguous operators in the first argument of a method invocation
+    without parentheses.
+  Enabled: true
+
+Lint/AmbiguousRegexpLiteral:
+  Description: Checks for ambiguous regexp literals in the first argument of a method
+    invocation without parenthesis.
+  Enabled: true
+
+Lint/DeprecatedClassMethods:
+  Description: Check for deprecated class method calls.
+  Enabled: true
+
+Lint/ErbNewArguments:
+  Description: Emulates warnings in Ruby 2.6
+  Enabled: true
+
+Lint/RedundantStringCoercion:
+  Description: Checks for Object#to_s usage in string interpolation.
+  Enabled: true
+
+Lint/RequireParentheses:
+  Description: Checks for expressions where there is a call to a predicate method with at least one
+    argument, where no parentheses are used around the parameter list, and a boolean operator, &&
+    or ||, is used in the last argument.
+  Enabled: true
+
+Lint/ShadowingOuterLocalVariable:
+  Description: checks for the use of local variable names from an outer scope in block arguments or
+    block-local variables.
+  Enabled: true
+
+Lint/UriEscapeUnescape:
+  Description: This cop identifies places where URI.escape can be replaced by CGI.escape,
+    URI.encode_www_form, or URI.encode_www_form_component depending on your specific use case.
+    Also this cop identifies places where URI.unescape can be replaced by CGI.unescape,
+    URI.decode_www_form, or URI.decode_www_form_component depending on your specific use case.
+  Enabled: true
+
+Lint/UselessAssignment:
+  Description: Checks for useless assignment to a local variable.
+  Enabled: true
+
+Metrics/AbcSize:
+  Description: Checks that the ABC size of methods is not higher than the configured maximum.
+  Enabled: false
+
+Metrics/BlockLength:
+  Description: Cop checks if the length of a block exceeds some maximum value.
+  Enabled: false
+
+Metrics/MethodLength:
+  Description: Checks if the length of a method exceeds some maximum value.
+  Enabled: false
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+RSpec/AnyInstance:
+  Description: Check that instances are not being stubbed globally.
+    Prefer instance doubles over stubbing any instance of a class
+  Enabled: false
+
+RSpec/ContextWording:
+  Description: Checks that context docstring starts with an allowed prefix.
+  Enabled: true
+  Prefixes:
+    - when
+    - with
+    - without
+    - and # custom
+
+RSpec/ExampleLength:
+  Description: Checks for long examples.
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Description: Checks if examples contain too many expect calls.
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Description: Checks if example groups contain too many let and subject calls.
+  Enabled: false
+
+RSpec/NestedGroups:
+  Description: Checks for nested example groups.
+  Enabled: false
+
+Style/AndOr:
+  Description: Use &&/|| instead of and/or.
+  Enabled: true
+  EnforcedStyle: always
+  SupportedStyles:
+  - always
+  - conditionals
+
+Style/ClassAndModuleChildren:
+  Description: Checks the style of children definitions at classes and modules.
+  Enabled: true
+  EnforcedStyle: nested
+
+Style/ColonMethodCall:
+  Description: Checks for methods invoked via the operator instead of the . operator
+  Enabled: true
+
+Style/DefWithParentheses:
+  Description: Checks for parentheses in the definition of a method, that does not take any
+    arguments.
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Description: Add the frozen_string_literal comment to the top of files to help transition
+    from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: false
+  EnforcedStyle: always
+  SupportedStyles:
+  - always
+  - always_true
+  - never
+
+Style/HashSyntax:
+  Description: Checks hash literal syntax
+  Enabled: true
+  EnforcedStyle: ruby19
+  UseHashRocketsWithSymbolValues: false
+  PreferHashRocketsForNonAlnumEndingSymbols: false
+  SupportedStyles:
+  - ruby19
+  - hash_rockets
+  - no_mixed_keys
+  - ruby19_no_mixed_keys
+
+Style/MethodDefParentheses:
+  Description: Checks if the method definitions have or don't have parentheses.
+  Enabled: true
+  EnforcedStyle: require_parentheses
+  SupportedStyles:
+  - require_parentheses
+  - require_no_parentheses
+  - require_no_parentheses_except_multiline
+
+Style/NumericLiterals:
+  Description: Checks for big numeric literals without _ between groups of digits in them
+  Enabled: false
+
+Style/ParenthesesAroundCondition:
+  Description: Checks for the presence of superfluous parentheses around the condition of
+    if/unless/while/until.
+  Enabled: true
+  AllowSafeAssignment: true
+  AllowInMultilineConditions: false
+
+Style/RedundantBegin:
+  Description: Checks for redundant begin blocks.
+  Enabled: true
+
+Style/RedundantFreeze:
+  Description: Checks usages of Object#freeze on immutable objects.
+  Enabled: true
+
+Style/RedundantPercentQ:
+  Description: Checks for %q/%Q when single quotes or double quotes would do.
+  Enabled: true
+
+Style/RedundantReturn:
+  Description: Checks for redundant return expressions.
+  Enabled: true
+  AllowMultipleReturnValues: true
+
+Style/RegexpLiteral:
+  Description: Use / or %r around regular expressions.
+  Enabled: true
+  EnforcedStyle: slashes
+  AllowInnerSlashes: false
+  SupportedStyles:
+  - slashes
+  - percent_r
+  - mixed
+
+Style/Semicolon:
+  Description: Checks for multiple expressions placed on the same line. It also checks for lines
+    terminated with a semicolon.
+  Enabled: true
+  AllowAsExpressionSeparator: true
+
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference.
+  Enabled: true
+  EnforcedStyle: single_quotes
+  ConsistentQuotesInMultiline: true
+
+Style/TrailingCommaInArrayLiteral:
+  Description: Checks for trailing comma in array literals
+  Enabled: true
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
+  Description: Checks for trailing comma in hash literals
+  Enabled: true
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrivialAccessors:
+  Description: Checks for trivial reader/writer methods, that c`ould have been created with the
+    attr_* family of functions automatically.
+  Enabled: true
+  ExactNameMatch: true
+  AllowPredicates: true
+  AllowDSLWriters: true
+  IgnoreClassMethods: false
