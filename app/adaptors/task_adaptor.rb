@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Adaptor class for preparing task with the weather info
 class TaskAdaptor
   attr_accessor :user, :data
 
