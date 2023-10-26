@@ -18,9 +18,11 @@
         <h2><%= I18n.t('location.name') %>, <%= current_user.location&.name %></h2>
         <%= button_to("Log Out", destroy_user_session_path, method: :delete, class: 'align_right') %>
       </div>
-
-      <p class="notice">Welcome to my website!</p>
-
+      <p>
+        <% if @jwt %>
+          <b>JWT Token for Accessing tasks crud Endpoint is </b> <%= @jwt %>
+        <% end %>
+      </p>
 
     </header>
 
