@@ -44,6 +44,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'rspec-rails'
   gem 'rubocop', require: false
+  gem 'dotenv-rails'
 end
 
 group :development do
