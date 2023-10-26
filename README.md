@@ -44,6 +44,28 @@ Consider the ER diagram for the databse
 #### [Request Specs](https://github.com/nitanshu1808/task_manager_weather_app/tree/main/spec/requests)
 <img width="794" alt="Screenshot 2023-10-26 at 04 31 10" src="https://github.com/nitanshu1808/task_manager_weather_app/assets/15921580/663d6c79-6c67-4809-9fec-86e5d46aa233">
 
+### Rails Console Automation
+
+Consider the commands below for creating user, tasks, and location 
+
+```
+rails c
+user = FactoryBot.create(:user)
+location = FactoryBot.create(:location, user: user)
+task = FactortBot.create(:task, user: user)
+```
+<img width="1727" alt="Screenshot 2023-10-26 at 04 50 41" src="https://github.com/nitanshu1808/task_manager_weather_app/assets/15921580/63a5e545-7ac8-4d6f-9f32-8941eb6d558d">
+
+
+
+Once the above records are created, the tasks with weather could be retrieved using the TaskAdaptor Class
+
+```
+TaskAdaptor.new(user).build
+```
+<img width="1149" alt="Screenshot 2023-10-26 at 04 53 01" src="https://github.com/nitanshu1808/task_manager_weather_app/assets/15921580/3ab8214b-c9ab-4fc6-a3fe-b9367b4269e1">
+
+
 ### Todos
 * UI improvements
 * Adding specs for user registration/sessions
