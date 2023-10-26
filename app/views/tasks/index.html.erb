@@ -17,9 +17,9 @@
         <td><%= task[:title].truncate(10) %></td>
         <td><%= task[:description].truncate(20) %></td>
         <td><%= task[:due_date] %></td>
-        <td><%= task[:weather]["temp"] %></td>
-        <td><%= task[:weather]["humidity"] %></td>
-        <td><%= task[:weather]["wind_speed"] %></td>
+        <td><%= task.dig(:weather, "temp") || I18n.t('na') %></td>
+        <td><%= task.dig(:weather,"humidity") || I18n.t('na') %></td>
+        <td><%= task.dig(:weather,"wind_speed") || I18n.t('na') %></td>
       </tr>
     <% end %>
   </table>

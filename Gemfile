@@ -48,15 +48,16 @@ end
 
 group :development do
   gem 'awesome_print'
-  gem 'web-console'
   gem 'byebug'
+  gem 'web-console'
 end
 
 group :test do
+  gem 'database_cleaner-active_record'
   gem 'shoulda-matchers'
 end
 
-gem 'devise', '~> 4.9'
-gem "httparty", "~> 0.21.0"
 gem 'batch-loader'
+gem 'devise', '~> 4.9'
+gem 'httparty', '~> 0.21.0'
 gem 'parallel'

@@ -30,7 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  not_available: "N/A"
+  na: "N/A"
   tasks:
     title: 'Title'
     description: 'Description'

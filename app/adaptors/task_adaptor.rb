@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class TaskAdaptor
   attr_accessor :user, :data
 

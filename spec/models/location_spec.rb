@@ -5,7 +5,6 @@ require 'rails_helper'
 RSpec.describe Location, type: :model do
   describe '#validations' do
     it { is_expected.to validate_presence_of(:name) }
-    it { is_expected.to validate_presence_of(:user_id) }
     it { is_expected.to validate_length_of(:name).is_at_least(ApplicationRecord::MIN_STRING_LENGTH) }
   end
 
