@@ -45,6 +45,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'dotenv-rails'
+  gem 'rubocop-rspec', require: false
+  gem 'byebug'
 end
 
 group :development do
