@@ -53,7 +53,7 @@ class TaskAdaptor
             dt: task.due_date.utc.to_i,
           }
 
-          WeatherService.fetch(options)['data'].first
+          WeatherService.fetch(options)['data'].first || {}
         end
       end
     end

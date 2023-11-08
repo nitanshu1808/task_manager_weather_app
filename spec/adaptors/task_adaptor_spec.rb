@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe TaskAdaptor do
   subject { task_adaptor_instance.build }
 
+  before { WebMock.disable_net_connect! }
+
   let(:task_adaptor_instance) { described_class.new(user) }
 
   context 'when there is task associated with a user' do
@@ -28,8 +30,7 @@ RSpec.describe TaskAdaptor do
         allow(WeatherService).to receive(:fetch).and_return({ 'data' => [] })
       end
 
-      let(:data) { nil }
-
+      let(:data) { {} }
       it { is_expected.to eql(expected_response) }
     end
 
